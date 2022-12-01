@@ -22,6 +22,7 @@ public class HomeController {
 
     @RequestMapping("")
     public String index(Model model) {
+        System.out.println("index mapping");
         model.addAttribute("jobs", jobRepository.findAll());
         return "index";
     }
